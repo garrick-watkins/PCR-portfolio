@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<!--
+	Garrick Watkins — Business Analytics Portfolio
+-->
+<html lang="en">
+	<head>
+		<title>Garrick Watkins — Business Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Garrick Watkins — Business Analytics senior at Western Washington University. Focused on AI integration in supply chain and logistics." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── Custom additions, layered on top of Dimension's base styles ── */
+
+			.meta {
+				font-family: 'IBM Plex Mono', ui-monospace, monospace;
+				font-size: 0.72rem;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.55);
+			}
+
+			.hero-meta {
+				display: block;
+				margin-bottom: 1.25rem;
+			}
+
+			.category {
+				margin-top: 3rem;
+				padding-top: 1.5rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.14);
+			}
+
+			.category:first-of-type {
+				margin-top: 2rem;
+			}
+
+			.category-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-bottom: 1.75rem;
+			}
+
+			.category-head h3 {
+				margin: 0;
+			}
+
+			.activity {
+				background: rgba(255, 255, 255, 0.025);
+				border-left: 2px solid #ff6b35;
+				padding: 1.4rem 1.5rem;
+				margin-bottom: 1.4rem;
+				border-radius: 0 4px 4px 0;
+			}
+
+			.activity .meta {
+				display: block;
+				margin-bottom: 0.4rem;
+			}
+
+			.activity h4 {
+				margin: 0 0 0.3rem 0;
+				font-size: 1.05rem;
+			}
+
+			.activity .date {
+				display: block;
+				font-size: 0.82rem;
+				color: rgba(255, 255, 255, 0.55);
+				font-style: italic;
+				margin-bottom: 1rem;
+			}
+
+			.activity p {
+				margin: 0;
+				font-size: 0.95rem;
+				line-height: 1.65;
+			}
+
+			.points-badge {
+				display: inline-block;
+				font-family: 'IBM Plex Mono', ui-monospace, monospace;
+				font-size: 0.68rem;
+				letter-spacing: 0.12em;
+				padding: 0.2rem 0.55rem;
+				background: rgba(255, 107, 53, 0.18);
+				color: #ff8a5e;
+				border-radius: 3px;
+				vertical-align: middle;
+				white-space: nowrap;
+			}
+
+			.final-reflection {
+				background: rgba(255, 107, 53, 0.05);
+				border-left: 3px solid #ff6b35;
+				padding: 1.5rem 1.75rem;
+				border-radius: 0 4px 4px 0;
+				margin-bottom: 1rem;
+			}
+
+			.final-reflection .meta {
+				display: block;
+				margin-bottom: 0.75rem;
+			}
+
+			.resume-embed {
+				width: 100%;
+				height: 700px;
+				border: 1px solid rgba(255, 255, 255, 0.18);
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.025);
+				margin-bottom: 1.5rem;
+			}
+
+			.image-placeholder {
+				width: 100%;
+				min-height: 180px;
+				border: 1.5px dashed rgba(255, 255, 255, 0.22);
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: rgba(255, 255, 255, 0.45);
+				font-family: 'IBM Plex Mono', ui-monospace, monospace;
+				font-size: 0.78rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				margin: 1.5rem 0;
+				text-align: center;
+				padding: 1rem;
+			}
+
+			.honesty {
+				font-style: italic;
+				font-size: 0.88rem;
+				padding: 1.25rem 1.5rem;
+				border: 1px dashed rgba(255, 255, 255, 0.22);
+				border-radius: 4px;
+				margin-top: 2.5rem;
+				color: rgba(255, 255, 255, 0.7);
+				line-height: 1.6;
+			}
+
+			.contact-list {
+				list-style: none;
+				padding: 0;
+				margin: 1.5rem 0 0 0;
+			}
+
+			.contact-list li {
+				padding: 0.85rem 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			.contact-list li:last-child {
+				border-bottom: none;
+			}
+
+			.contact-list .label {
+				font-family: 'IBM Plex Mono', ui-monospace, monospace;
+				font-size: 0.72rem;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.55);
+			}
+
+			.contact-list a {
+				color: #fff;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+			}
+
+			.contact-list a:hover {
+				border-bottom-color: #ff6b35;
+				color: #ff8a5e;
+			}
+
+			/* Override jarring article close button color if needed */
+			#main article .close:before {
+				background-color: rgba(255, 255, 255, 0.08);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon solid fa-compass"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Garrick Watkins</h1>
+								<p>Business Analytics &times; Operations &times; AI<br />
+								Western Washington University &mdash; Class of 2026</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#resume">Resume</a></li>
+								<li><a href="#activities">PCR Activities</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+
+								<span class="meta hero-meta"> BUSINESS ANALYTICS / GRAD JUN 2026</span>
+
+								<p>I am a senior at Western Washington University earning a Bachelor of Arts in Business Analytics, with a graduation date of June 2026. My path here has not been a straight line &mdash; I started at the University of Washington in pre-science, earned recognition on the Dean's List, and discovered along the way that my real interests sat at the intersection of data, decision-making, and the operational realities of how organizations actually run. Transferring to WWU let me build that foundation deliberately, through coursework in systems analysis, business intelligence, predictive analytics, and management.</p>
+
+								<p>Outside of school, I have spent four seasons as a wildland firefighter, most recently getting to serve as Incident Commander on 15-person teams for the Washington Department of Natural Resources. That experience taught me how operations actually behave under pressure &mdash; how supply, communication, and decision-making coordinate (or break down) when conditions change minute to minute. I bring that operational realism into my analytics work.</p>
+
+								<p>I am heading into the supply chain and logistics industry with a specific focus on AI integration &mdash; a field where the central challenge is augmenting human decision-making with predictive intelligence while keeping people accountable for the calls that matter most. As an IT Leadership member at WWU, I have hosted workshops for fellow students on GitHub, coding fundamentals, and agentic AI workflows. Something interesting about me: I have fought fire in remote terrain and built dashboards in Power BI in the same calendar month, and I think those two things have more in common than they look.</p>
+							</article>
+
+						<!-- Resume -->
+							<article id="resume">
+								<h2 class="major">Resume</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+
+								<span class="meta hero-meta">LAST UPDATED &middot; SPRING 2026</span>
+
+								<p>A current copy of my resume is embedded below. You can also <a href="resume.pdf" download>download the PDF directly</a>.</p>
+
+								<object class="resume-embed" data="resume.pdf" type="application/pdf">
+									<p>Your browser doesn't display embedded PDFs. <a href="resume.pdf" download>Download the resume here</a>.</p>
+								</object>
+
+								<ul class="actions">
+									<li><a href="resume.pdf" class="button primary icon solid fa-download" download>Download Resume</a></li>
+									<li><a href="https://linkedin.com/in/garrick-watkins" class="button icon brands fa-linkedin-in" target="_blank" rel="noopener">View on LinkedIn</a></li>
+								</ul>
+							</article>
+
+						<!-- PCR Activities -->
+							<article id="activities">
+								<h2 class="major">PCR Activities</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+
+								<!-- Final Reflection -->
+								<div class="final-reflection">
+									<span class="meta">Final Reflection &mdash; Professional Development at WWU</span>
+									<p>My path to a Bachelor of Arts in Business Analytics has not been a straight line, and I think that is the most valuable thing about it. I started at the University of Washington in pre-science, earned recognition on the Dean's List, and discovered along the way that my real interests sat at the intersection of data, decision-making, and the operational realities of how organizations actually run. Transferring to Western Washington University gave me the chance to build that foundation deliberately &mdash; through coursework in systems analysis, business intelligence, predictive analytics, and management &mdash; while simultaneously continuing my career as a wildland firefighter, where I led 15-person teams as Incident Commander and trained new crew members under high-stakes conditions. My time at WWU sharpened the analytical and professional communication skills I needed to translate that field experience into a language the business world understands, particularly through my role as an IT Leadership member where I hosted workshops on GitHub, coding fundamentals, and agentic AI workflows. Across my coursework, leadership, and professional readiness activities, the consistent through-line has been learning to bridge technical depth with the human side of operations &mdash; designing systems people can actually use, communicating findings to non-technical stakeholders, and keeping a clear head when decisions matter. I am heading into the supply chain and logistics industry with a specific focus on AI integration, a field where the central challenge is augmenting human decision-making with predictive intelligence while keeping people accountable for the calls that matter most. My background uniquely prepares me for this work: I have practiced making decisions under uncertainty with imperfect information, I understand operations as a coordinated movement of people, equipment, and information, and my analytics training has given me the tools to model and improve those systems at scale. Western Washington University has been the place where these pieces came together into a coherent professional identity, and I am leaving here ready to bring an unusual but valuable combination of operational realism and analytical rigor to whatever team I join next.</p>
+								</div>
+
+								<!-- Category 01: Ethics & Professionalism -->
+								<div class="category">
+									<div class="category-head">
+										<h3><span class="meta">[ 01 ]</span> Ethics &amp; Professionalism</h3>
+										<span class="points-badge">08 PTS</span>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Leadership Role</span>
+										<h4>ITL (Information Technology Leadership) Member <span class="points-badge">5 PTS</span></h4>
+										<span class="date">September 2025 &mdash; Present</span>
+										<p>I have been a member of WWU's Information Technology Leadership (ITL) program since Fall 2025. This past quarter alone, I hosted two workshops for fellow students: an introduction to GitHub and version control and coding fundamentals session, and a workshop on building agentic AI workflows. Designing and delivering these workshops pushed me to translate technical concepts into clear, accessible material for peers at varying skill levels, which sharpened both my teaching ability and my own depth of understanding. The agentic AI workshop was my favorite &mdash; the field is moving fast, and getting to share where it is heading felt energizing for the attendees and me. Through ITL, I have built real confidence presenting in front of groups, fielding live technical questions on the spot, and leading sessions where the outcome depends entirely on my preparation. The program has also given me consistent exposure to faculty mentorship and industry-focused conversations about leadership in analytics, which has shaped how I think about my own professional identity. I will carry these skills directly into my career as a business analyst, where the ability to translate technical concepts for non-technical stakeholders is one of the most valuable things I can bring to a team. Leading ITL workshops has made me far more comfortable owning a room, which will pay off in every stakeholder presentation and team training I deliver going forward.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Class That Counts</span>
+										<h4>MIS 321 &mdash; Systems Analysis and Design <span class="points-badge">3 PTS</span></h4>
+										<span class="date">Spring Quarter 2025 &middot; Field project completed May 23, 2025</span>
+										<p>In MIS 321, I worked with a three-person team to conduct a real-world Systems Analysis Field Project for Quicksilver Photo Lab, a photography business in downtown Bellingham owned by Cate Reed. Our team &mdash; Kennedy Harris, Kai Borgnino, and myself &mdash; operated as a consulting group called IS DZign Consultants, conducting an in-person introductory meeting, a two-hour stakeholder interview, and ongoing email correspondence to gather the information needed to analyze their Sales/Return Transactions and Reporting System. I contributed to mapping their current system through Context and Level-0 Data Flow Diagrams, assessing how their Clover POS, QuickBooks, and Trello tools actually performed in practice, and developing professional recommendations for system enhancements like digitized order forms and real-time transaction tracking. What I valued most about this project was that we were responsible for a real client's information and operations &mdash; including identifying concerns about how customer data was being stored &mdash; which made professional standards feel concrete rather than abstract. Our team also maintained a formal log of every interaction and sent a thank-you note after the engagement, both of which made me realize how much professionalism shows up in the small habits, not just the deliverables. The course pushed me to take ownership of work that an actual small business owner would read and rely on, which is a different kind of accountability than turning in a problem set. I will apply this experience directly as a business analyst, where I will routinely be in the position of analyzing real systems, surfacing concerns to stakeholders, and producing documentation that other people will act on. MIS 321 was where I learned that professionalism in technical work is fundamentally about respecting the people who depend on your analysis.</p>
+									</div>
+								</div>
+
+								<!-- Category 02: EDI -->
+								<div class="category">
+									<div class="category-head">
+										<h3><span class="meta">[ 02 ]</span> Accessibility, Equity, Diversity &amp; Inclusion</h3>
+										<span class="points-badge">03 PTS</span>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Class That Counts</span>
+										<h4>MGMT 311 &mdash; Introduction to Management and Organizational Behavior <span class="points-badge">3 PTS</span></h4>
+										<span class="date">Spring Quarter 2025 &middot; Completed June 2025</span>
+										<p>MGMT 311 explored organization theory, interpersonal communication, power dynamics, and the role of values and philosophy within organizations &mdash; topics that sit at the intersection of management and equity, diversity, and inclusion. The capstone group project, Mighty Management, was a deep dive into the managerial practices of Amy Imhof-Harris, the Nurse Manager of Interventional Radiology at Tacoma General Hospital, who leads a team of about 30 nurses and technologists. Working with a four-person team of students from different backgrounds, I helped conduct a recorded interview, cross-reference our notes for accuracy, and develop recommendations grounded in management theory. Our final recommendation emphasized smaller-group meetings to promote psychological safety, more inclusive communication channels, and giving employees stronger voice through structured feedback &mdash; concepts that pushed me to see inclusion as an operational practice, not just a value statement. What I appreciated most was learning that inclusion is something a manager builds through everyday choices like meeting structure, feedback format, and which suggestions actually get implemented. The course also gave me vocabulary for things I had already experienced as a wildland firefighter &mdash; how team voice gets heard or lost, and how individual autonomy connects to motivation in high-pressure environments. As I move into business analytics roles, I will apply these lessons by being deliberate about whose voice is in the room during decision-making and how data findings get communicated back to the people that data describes. Inclusive management is not a side concern in analytics work &mdash; it is how you make sure analysis actually serves the whole team, not just whoever is loudest in the meeting.</p>
+									</div>
+								</div>
+
+								<!-- Category 03: Professional Communication -->
+								<div class="category">
+									<div class="category-head">
+										<h3><span class="meta">[ 03 ]</span> Professional Communication</h3>
+										<span class="points-badge">03 PTS</span>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Student Club Event</span>
+										<h4>MISA Meeting &mdash; Job Hunting and Resume Building <span class="points-badge">1 PT</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> October 2025</span>
+										<p>I attended a Management Information Systems Association (MISA) meeting focused on job hunting strategies and resume building for MIS and business analytics students. The session covered how to tailor resumes for technical roles, how to talk about projects in interviews, and how current MISA members had navigated the early stages of their own job searches. I participated by listening, taking notes on resume formatting tips that I had not previously considered, and asking a question about how to frame academic projects versus professional experience on a one-page resume. What I appreciated most was hearing directly from peers who are slightly further along in the process &mdash; it made the job search feel more concrete and less abstract. The meeting reinforced for me that professional communication starts with how you present yourself on paper, before any interview even happens. I came away with specific edits I wanted to make to my own resume and a clearer sense of how MIS students in particular get evaluated. I will apply this in my future career by treating every resume update and LinkedIn refresh as a professional communication exercise, not a formality. Showing up to club events like this one also reminded me that building a professional network starts well before graduation.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">WWU Workshop</span>
+										<h4>Understanding Job Offers Workshop <span class="points-badge">1 PT</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> Financial Literacy Month, April 16th 2025</span>
+										<p>I attended the Understanding Job Offers workshop hosted by MFLP's Peter Wagner during Financial Literacy Month, presented in partnership with the CBE Baker-Tilly Student Success Center. The session covered the different types of job offers, types of compensation beyond base salary, and how to navigate the negotiation process from a hiring manager's perspective. Peter brought years of real-world experience as both a hiring manager and a candidate, which made the advice feel grounded rather than theoretical. I participated by listening closely, taking notes on the negotiation framework he laid out, and thinking through how I would apply it to offers I expect to receive after graduation. What I valued most was learning that negotiation is a normal, expected part of the offer process &mdash; not something that risks the offer if approached professionally. The workshop also helped me understand that total compensation includes things like benefits, equity, and growth opportunity, not just salary, which changes how to evaluate competing offers. I will apply this directly in the coming months as I move into post-graduation job conversations, and I now feel far more prepared to have those discussions confidently. Knowing how to professionally communicate about my own worth is a skill I will use for the entire length of my career.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">BAP Event</span>
+										<h4>CBE Spring Gala (Beta Alpha Psi) <span class="points-badge">1 PT</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> April 22nd 2025</span>
+										<p>I attended the College of Business and Economics Spring Gala, a Beta Alpha Psi event bringing together students, faculty, alumni, and industry professionals from across the CBE community. The evening provided a structured opportunity to practice professional networking in a formal setting, including introductions, small talk with people I had never met, and conversations with professionals working in fields adjacent to my own. I participated by introducing myself to several attendees, asking about their career paths, and practicing how to concisely describe my own background in business analytics. What I appreciated about the Gala was the variety of people in the room &mdash; accounting professionals, faculty I had not had as instructors, and students from majors I do not interact with day-to-day. The event pushed me to be intentional about how I present myself professionally outside of a classroom or interview context. I gained more comfort with the rhythm of professional networking events, which is a skill that genuinely improves with practice. In my future career I will attend industry events, conferences, and company functions, and the Gala was a low-stakes way to build that muscle before the stakes get higher. I came away with new contacts and a clearer sense that professional communication includes how you carry yourself in social-professional settings, not just formal presentations.</p>
+									</div>
+								</div>
+
+								<!-- Category 04: Career Preparation -->
+								<div class="category">
+									<div class="category-head">
+										<h3><span class="meta">[ 04 ]</span> Career Preparation</h3>
+										<span class="points-badge">08 PTS</span>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Professional Experience</span>
+										<h4>Wildland Firefighter &mdash; Washington Department of Natural Resources <span class="points-badge">3 PTS</span></h4>
+										<span class="date">June 2025 &mdash; September 2025</span>
+										<p>During the summer between my junior and senior years at WWU, I worked as a wildland firefighter for the Washington Department of Natural Resources, serving as Incident Commander on 15-person teams responding to active fires across the state. The role required making real-time tactical decisions under conditions where information was incomplete, situations evolved minute-by-minute, and the cost of a wrong call was measured in safety, equipment, and acres lost &mdash; essentially a live operations management problem. I also trained a first-year firefighter on safety protocols, equipment use, and field decision-making, which gave me direct experience onboarding someone into a complex operational system, and I coordinated with multiple agencies and aerial units to translate ground conditions into clear, concise updates that leadership could act on. What I valued most was learning that effective leadership in chaotic environments depends on simple, repeatable communication frameworks and trust built through preparation, not improvisation. The experience also made me realize that wildland fire response is fundamentally a supply chain and logistics operation: deploying crews, equipment, water, and information to the right place at the right time, across multiple coordinating agencies, under constantly shifting conditions. This perspective is directly relevant to my career goal of working in AI-integrated supply chain and logistics, where the core challenge is augmenting human decisions with predictive data while keeping a human in the loop for the calls that matter most. I have already practiced the mindset that this industry needs &mdash; trusting inputs from weather services, fire behavior models, and aerial reconnaissance to inform my decisions, while remaining accountable for the final call on the ground. As I move into supply chain and AI roles after graduation, I will bring an operational realism that most analysts coming straight from coursework do not have, and I will be able to design and use AI tools with a clear sense of what actually happens when systems get tested under real-world conditions.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Career Platform</span>
+										<h4>Handshake Account <span class="points-badge">1 PT</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> Active &mdash; updated regularly</span>
+										<p>I created and maintain an active account on Handshake, WWU Career Services' primary platform for job postings, internships, and recruiting events. Setting up the account required me to build out a full profile including my resume, skills, work authorization, career interests, and academic background. I have used the platform to browse job and internship postings relevant to business analytics, sign up for career events, and stay aware of which employers are actively recruiting from WWU. What I appreciate about Handshake is that it is targeted specifically to students and recent graduates, so the postings are realistic entry-level opportunities rather than roles requiring years of experience. Maintaining the account has kept me aware of what skills employers are actively looking for, which has influenced how I prioritize coursework and projects. The platform has also helped me see the breadth of analytics-adjacent roles I had not previously considered. I will continue using Handshake actively through graduation and into my early job search, and I will apply the same discipline of keeping my professional profiles current throughout my career. Career preparation is an ongoing process, and Handshake has been the entry point into thinking about it that way.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Professional Network</span>
+										<h4>Active LinkedIn Profile <span class="points-badge">1 PT</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> Active &mdash; updated regularly</span>
+										<p>I maintain an active LinkedIn profile at linkedin.com/in/garrick-watkins that reflects my education, work experience, leadership activities, and professional interests. Building and maintaining the profile has required me to think carefully about how I present my background &mdash; including unusual experience like wildland firefighting &mdash; in a way that is professional and relevant to business analytics roles. I regularly update the profile as I complete new projects, leadership activities, or coursework worth highlighting, and I have connected with classmates, faculty, and professionals I have met at WWU events. What I appreciate about LinkedIn is that it forces me to articulate my own value in concise, professional language, which is a writing exercise that translates directly to cover letters, resumes, and interviews. The platform has also helped me research companies and roles I am interested in, and to see the career paths of people who have graduated from similar programs. Maintaining an active profile has made me more deliberate about the story I want to tell about my own career trajectory. I will continue using LinkedIn throughout my career as a hub for professional networking, opportunity discovery, and keeping in touch with people I have worked with along the way. Career preparation is in large part about being findable, and LinkedIn is the foundation of that.</p>
+									</div>
+
+									<div class="activity">
+										<span class="meta">Career Services Event</span>
+										<h4>WWU Career Services Job &amp; Internship Fair <span class="points-badge">3 PTS</span></h4>
+										<span class="date"><!-- TODO: fill in actual date --> April 17th 2026</span>
+										<p>I attended the WWU Career Services Job and Internship Fair, where dozens of employers were on campus actively recruiting students for full-time roles, internships, and post-graduation opportunities. I prepared in advance by researching the companies that would be there, identifying the ones most relevant to business analytics and MIS, and practicing how I would introduce myself in a thirty-second window. At the fair I spoke with recruiters from several companies, asked questions about their analytics and entry-level pipelines, and handed out copies of my resume. What I valued most about the experience was the chance to practice professional self-presentation under realistic conditions &mdash; recruiters are evaluating you from the moment you walk up to the table. I came away with a stronger sense of which companies are actively hiring in my field, what they are looking for in candidates, and how I stack up against their expectations. The fair also gave me concrete follow-up actions: specific recruiters to contact on LinkedIn, postings to apply to on Handshake, and gaps in my own preparation to address. I will continue attending career fairs throughout my professional life, because they remain one of the most efficient ways to make direct contact with hiring teams. The experience reinforced that career preparation is most effective when it includes real-world practice, not just resume polishing in isolation.</p>
+									</div>
+								</div>
+
+								<!-- Academic Honesty Statement -->
+								<div class="honesty">
+									All activities have been completed by myself during my time at Western Washington University. I have read the Academic Honesty Policy and can confirm that my description of these activities is from my own lived experience of them.
+								</div>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+
+								<p>I am open to conversations about supply chain analytics, AI integration in operations, and entry-level analyst roles. The best ways to reach me:</p>
+
+								<ul class="contact-list">
+									<li>
+										<span class="label">Email</span>
+										<a href="mailto:watking4@wwu.edu">watking4@wwu.edu</a>
+									</li>
+									<li>
+										<span class="label">LinkedIn</span>
+										<a href="https://linkedin.com/in/garrick-watkins" target="_blank" rel="noopener">linkedin.com/in/garrick-watkins</a>
+									</li>
+									<li>
+										<span class="label">GitHub</span>
+										<a href="https://github.com/garrick-watkins" target="_blank" rel="noopener"><!-- TODO: replace with actual GitHub URL -->github.com//garrick-watkins</a>
+									</li>
+								</ul>
+
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/garrick-watkins" class="icon brands fa-linkedin-in" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/garrick-watkins" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+									<li><a href="mailto:watking4@wwu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Garrick Watkins 2026. Template: <a href="https://html5up.net">Dimension by HTML5 UP</a>, used under <a href="https://html5up.net/license">CCA 3.0</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
