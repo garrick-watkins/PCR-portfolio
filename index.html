@@ -15,7 +15,20 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			/* ── Custom additions, layered on top of Dimension's base styles ── */
-
+			/* Prevent text selection / editable feel */
+			body {
+			    user-select: none;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    cursor: default;
+			}
+			
+			/* But keep selection enabled where someone might want to copy info */
+			a, .contact-list, .contact-list a {
+			    user-select: text;
+			    -webkit-user-select: text;
+			    -moz-user-select: text;
+			}
 			.meta {
 				font-family: 'IBM Plex Mono', ui-monospace, monospace;
 				font-size: 0.72rem;
